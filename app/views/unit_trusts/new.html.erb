@@ -1,0 +1,14 @@
+<h2> Enter new unit trust details </h2>
+<div class="row">
+  <div class="col-md-6 cil-md-offset-3">
+    <%= form_for @unit_trust do |f| %>
+
+  <%= f.text_field :name, placeholder: "Enter fund name", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :fund_house, placeholder: "Enter fund house", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :date_invested, placeholder: "Enter date invested", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :amount_invested, placeholder: "Enter amount invested", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :date_sold, placeholder: "Enter date sold", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :units_sold, placeholder: "Enter units sold", class: 'form-control fontinput' %> <br>
+
+  <%= f.submit "Register", class: 'btn btn-primary btn-lg' %>
+  <% end %>

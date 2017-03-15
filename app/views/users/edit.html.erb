@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6 cil-md-offset-3">
+    <%= form_for :user, method: edit_user_path do |f| %>
+
+  <%= f.text_field :salutation, placeholder: "Enter your salutation", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :first_name, placeholder: "Enter your first name", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :last_name, placeholder: "Enter your last name", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :dob, placeholder: "Enter your date of birth", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :ContactNumber, placeholder: "Enter your contact number", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :email, placeholder: "Enter your email", class: 'form-control fontinput' %> <br>
+  <%= f.password_field :password, placeholder: "Enter your password", class: 'form-control fontinput' %> <br>
+
+
+  <%= f.submit "Save changes", class: 'btn btn-primary btn-lg' %>
+  <% end %>

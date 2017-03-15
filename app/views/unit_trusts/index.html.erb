@@ -1,0 +1,36 @@
+<h2>Unit Trusts</h2>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Fund House</th>
+      <th>Sectors</th>
+      <th>Assets Invested</th>
+      <th>Risk Return Ratio</th>
+      <th>Sharpe Ratio</th>
+      <th>Date Invested</th>
+      <th>Amount Invested</th>
+      <th>Initial NAV</th>
+      <th>Units Bought</th>
+      <th>Date Sold</th>
+      <th>Units Sold</th>
+      <th>NAV Sold</th>
+      <th>Amount Received</th>
+      <th>Platform Fees</th>
+      <th>Wrap Fees</th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @unit_trust.each do |unit_trust| %>
+    <tr>
+      <th>
+        <%= unit_trust.name %>
+      </th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<button class="btn btn-info"><%= link_to 'Update fund', edit_unit_trust_path %>Info</button>

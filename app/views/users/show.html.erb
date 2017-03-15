@@ -1,0 +1,86 @@
+<h3>Welcome, <%= current_user.first_name %></h3>
+<p>This is the latest update of your funds</p>
+<body>
+
+  <div id='myDiv' style="width:600px;height:400px;">
+    <script>
+    var trace1 = {
+      x: [1, 2, 3, 4],
+      y: [10, 15, 13, 17],
+      mode: 'markers',
+      name: 'Target'
+    };
+
+    var trace2 = {
+      x: [2, 3, 4, 5],
+      y: [16, 5, 11, 9],
+      mode: 'lines+markers',
+      name: 'Unit Trust 1'
+    };
+
+    var trace3 = {
+      x: [1, 2, 3, 4],
+      y: [12, 9, 15, 12],
+      mode: 'lines+markers',
+      name: 'Unit Trust 2'
+    };
+
+    var data = [trace1, trace2, trace3];
+
+    var layout = {
+      title: 'Financial Portfolio',
+      xaxis: {
+      title: 'Past 12 months'
+    },
+      yaxis: {
+      title: 'Net Asset Value'
+      }
+    };
+
+    Plotly.newPlot('myDiv', data, layout);
+
+
+        // var frames = [
+        //   {name: 'Unit Trust 1', data: [{x: [], y: []}]},
+        //   {name: 'Unit Trust 2', data: [{x: [], y: []}]},
+        //   {name: 'Unit Trust 3', data: [{x: [], y: []}]},
+        // ];
+        //
+        // var n = 365;
+        // for (var i = 0; i < n; i++) {
+        // var t = i / (n - 1) * 2 - 1;
+        // // unit trust 1
+        // frames[0].data[0].x[i] = t * 200;
+        // frames[0].data[0].y[i] = t * -4;
+        // // unit trust 2
+        // frames[1].data[0].x[i] = t * 200;
+        // frames[1].data[0].y[i] = t * 2;
+        //
+        // // unit trust 3
+        // frames[2].data[0].x[i] = t * 200;
+        // frames[2].data[0].y[i] = t * 8;
+        // }
+        //
+        // Plotly.plot('graph', [{
+        //   x: frames[0].data[0].x,
+        //   y: frames[0].data[0].y,
+        //
+        //   line: {simplify: false},
+        // }], {
+        //   xaxis: {range: [0, 365]},
+        //   yaxis: {range: [-10, 10]},
+        //   updatemenus: [{
+        //     buttons: [
+        //     {method: 'animate', args: [['Unit Trust 1']], label: 'Unit Trust 1'},
+        //     {method: 'animate', args: [['Unit Trust 2']], label: 'Unit Trust 2'},
+        //     {method: 'animate', args: [['Unit Trust 3']], label: 'Unit Trust 3'}
+        //     ]
+        //   }]
+        // }).then(function() {
+        //   Plotly.addFrames('graph', frames);
+        // });
+
+    </script>
+  </div>
+
+</body>
