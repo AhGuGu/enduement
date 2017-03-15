@@ -7,8 +7,12 @@
   <%= f.text_field :fund_house, placeholder: "Enter fund house", class: 'form-control fontinput' %> <br>
   <%= f.text_field :date_invested, placeholder: "Enter date invested", class: 'form-control fontinput' %> <br>
   <%= f.text_field :amount_invested, placeholder: "Enter amount invested", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :initial_nav, placeholder: "Enter initial NAV", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :last_five_years_return, placeholder: "Enter past 5 years % return", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :last_three_years_return, placeholder: "Enter past 3 years % return", class: 'form-control fontinput' %> <br>
+  <%= f.text_field :last_one_year_return, placeholder: "Enter past year % return", class: 'form-control fontinput' %> <br>
   <%= f.text_field :date_sold, placeholder: "Enter date sold", class: 'form-control fontinput' %> <br>
   <%= f.text_field :units_sold, placeholder: "Enter units sold", class: 'form-control fontinput' %> <br>
 
-  <%= f.submit "Register", class: 'btn btn-primary btn-lg' %>
+  <%= f.submit "Add fund", class: 'btn btn-primary btn-lg' %>
   <% end %>

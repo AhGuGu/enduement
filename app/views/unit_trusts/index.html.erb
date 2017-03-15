@@ -3,13 +3,13 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>#</th>
       <th>Name</th>
       <th>Fund House</th>
       <th>Sectors</th>
       <th>Assets Invested</th>
-      <th>Risk Return Ratio</th>
-      <th>Sharpe Ratio</th>
+      <th>5 years return</th>
+      <th>3 years return</th>
+      <th>1 year return</th>
       <th>Date Invested</th>
       <th>Amount Invested</th>
       <th>Initial NAV</th>
@@ -25,12 +25,28 @@
   <tbody>
     <% @unit_trust.each do |unit_trust| %>
     <tr>
-      <th>
-        <%= unit_trust.name %>
-      </th>
+      <th><%= unit_trust.name %></th>
+      <th><%= unit_trust.fund_house %></th>
+      <th><%= unit_trust.sector%></th>
+      <th><%= unit_trust.assets%></th>
+      <th><%= unit_trust.last_five_years_return%></th>
+      <th><%= unit_trust.last_three_years_return%></th>
+      <th><%= unit_trust.last_one_year_return%></th>
+      <th><%= unit_trust.date_invested%></th>
+      <th><%= unit_trust.amount_invested%></th>
+      <th><%= unit_trust.initial_nav%></th>
+      <th><%= unit_trust.initial_number_units%></th>
+      <th><%= unit_trust.date_sold%></th>
+      <th><%= unit_trust.nav_sold%></th>
+      <th><%= unit_trust.units_sold%></th>
+      <th><%= unit_trust.amount_received%></th>
+      <th><%= unit_trust.platform_fees%></th>
+      <th><%= unit_trust.wrap_fees%></th>
+      <th><%= button_to "Edit", edit_unit_trust_path(current_user.id), class: "btn btn-info" %></th>
+      <th><%= button_to "Delete", unit_trust_path(unit_trust.user_id), method: :delete, class: "btn btn-info" %></th>
     </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<button class="btn btn-info"><%= link_to 'Update fund', edit_unit_trust_path %>Info</button>
+<button class="btn btn-info"><%= link_to 'New fund', new_unit_trust_path %></button>
