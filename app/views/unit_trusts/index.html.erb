@@ -42,8 +42,8 @@
       <th><%= unit_trust.amount_received%></th>
       <th><%= unit_trust.platform_fees%></th>
       <th><%= unit_trust.wrap_fees%></th>
-      <th><%= button_to "Edit", edit_unit_trust_path(current_user.id), class: "btn btn-info" %></th>
-      <th><%= button_to "Delete", unit_trust_path(unit_trust.user_id), method: :delete, class: "btn btn-info" %></th>
+      <!-- <th><%= link_to "Edit", edit_unit_trust_path(unit_trust.id), method: :get, class: "btn btn-info" %></th> -->
+      <th><%= button_to "Delete", unit_trust_path(unit_trust.id), method: :delete, class: "btn btn-info" %></th>
     </tr>
     <% end %>
   </tbody>

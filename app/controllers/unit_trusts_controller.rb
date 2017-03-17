@@ -38,7 +38,7 @@ end
 
   def update
     #computer does not remember that edit was ran
-    @unit_trust=UnitTrust.find_by_id(params[:user_id])
+    @unit_trust=UnitTrust.find_by_id(params[:id])
     if @unit_trust.update(unit_trust_params)
       redirect_to unit_trust_index_path
     else
@@ -47,11 +47,11 @@ end
   end
 
   def edit
-    @unit_trust=UnitTrust.find_by_id(params[:user_id])
+    @unit_trust=UnitTrust.find(params[:id])
   end
 
   def destroy
-    @unit_trust=UnitTrust.find(params[:user_id])
+    @unit_trust=UnitTrust.find(params[:id])
     @unit_trust.destroy
     redirect_to unit_trusts_path
   end
